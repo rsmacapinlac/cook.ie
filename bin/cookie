@@ -8,9 +8,5 @@ if template_dir.nil?
   template_dir = '/Volumes/z/Dropbox/!Templates'
 end
 
-puts template_dir
-
-o = CookieCutter::Oven.new 'test', 'blah', template_dir
-puts o
-
-puts 'c is for cookie'
+c = CookieCutter::Oven.new 'journal', '2016-01-08', template_dir
+c.save
