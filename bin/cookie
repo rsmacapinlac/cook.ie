@@ -8,5 +8,14 @@ if template_dir.nil?
   template_dir = '/Volumes/z/Dropbox/!Templates'
 end
 
-c = CookieCutter::Oven.new 'journal', '2016-01-08', template_dir
-c.save
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: cookie [options] template_name name"
+
+  opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+end.parse!
+
+#c = CookieCutter::Oven.new 'journal', '2016-01-08', template_dir
+#c.save
