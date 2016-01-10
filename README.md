@@ -6,10 +6,19 @@ This gem makes cookies. I mean, if cookies were files derived from erb templates
 
 Nooo!!! Don't install it. It's not done!
 
+## Setup
+
+The gem assumes that you have an environment variable called CC_TEMPLATE_DIR
+that has a pointer to a template folder.
+
+In the template folder, you have a config.yml file and your template files.
+
 ## Usage
 
 Look, it's not done but I mean you can download the code or clone this. Then
 figure out how to use it.
+
+bin/cookie template_name name
 
 ## Development
 
