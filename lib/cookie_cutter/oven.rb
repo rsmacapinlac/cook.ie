@@ -12,6 +12,7 @@ module CookieCutter
 
       log __method__, "Loading config file..."
 
+      @template_attach_bottom = nil
       @_config = YAML::load_file(File.join(template_dir, 'config.yml'))
       @_template_type = template_type
 
@@ -21,13 +22,19 @@ module CookieCutter
         log __method__, "Template:         #{@_template_type}"
         log __method__, "Template details: #{@_config[@_template_type]}"
         @template = File.join(template_dir, @_config[@_template_type]['template'])
-        @template_attach_bottom = File.join(template_dir, @_config[@_template_type]['repeat_bottom'])
         @output_ext = get_output_file_ext(@_config[@_template_type]['template'])
+        unless @_config[@_template_type]['repeat_bottom'].nil?
+          @template_attach_bottom = File.join(template_dir, @_config[@_template_type]['repeat_bottom'])
+        end
       end
     end
 
     def render_bottom_attach()
-      "\n\n\n" + ERB.new(File.open(@template_attach_bottom).read).result(binding)
+      if @template_attach_bottom.nil?
+        ""
+      else
+        "\n\n\n" + ERB.new(File.open(@template_attach_bottom).read).result(binding)
+      end
     end
 
     def render_master()
