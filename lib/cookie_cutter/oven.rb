@@ -8,12 +8,13 @@ module CookieCutter
     attr_accessor :template_attach_bottom
     attr_accessor :_config, :_template_type
 
-    def initialize(template_type, cookie_name, template_dir=ENV['CC_TEMPLATE_DIR'])
+    def initialize(template_type, cookie_name, template_dir_or_file=ENV['CC_TEMPLATE_DIR'])
 
       log __method__, "Loading config file..."
 
       @template_attach_bottom = nil
-      @_config = YAML::load_file(File.join(template_dir, 'config.yml'))
+
+      @_config = YAML::load_file(File.join(template_dir_or_file, 'config.yml'))
       @_template_type = template_type
 
       @cookie_name = cookie_name
@@ -44,6 +45,7 @@ module CookieCutter
     def save()
       output_full_path = File.join(@_config[@_template_type]['output_dir'], "#{@cookie_name}.#{@output_ext}")
 
+      # log __method__,"output_full_path: #{output_full_path}"
       if File.exists? output_full_path
         log __method__, "File exists: #{output_full_path}"
         f = File.open(output_full_path, 'a')
