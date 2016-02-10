@@ -1,4 +1,5 @@
 require 'pathname'
+require 'erb'
 
 module CookieCutter
   # builds a text file with specified parameters

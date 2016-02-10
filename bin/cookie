@@ -5,7 +5,6 @@ require "cookie_cutter"
 
 template_dir = ENV['CC_TEMPLATE_DIR']
 if template_dir.nil?
-  puts "in here"
   template_dir = '~/Dropbox/!Templates'
   template_dir = File.expand_path(template_dir)
 end
