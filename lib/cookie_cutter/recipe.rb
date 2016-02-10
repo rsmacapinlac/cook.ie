@@ -1,29 +1,30 @@
 module CookieCutter
-  class Cookie
-    attr_accessor :name
-    def initializer(name)
-      @name = name
-    end
-  end
-
+  # Reads config file information and builds a cookie from the selected template
   class Recipe
     DEFAULT_CONFIG_FILENAME = 'config.yml'
+    attr_accessor :cookie, :config_file_path
+
+    CONFIG_PATH = 'config_path'
 
     def initialize(config_file_path = nil)
       throw ArgumentError if config_file_path.nil?
 
+      @config_file_path = config_file_path
       @_config = Recipe.read_config_file(config_file_path)
     end
 
     def config
       @_config
     end
+
     def template
+      @_template[Recipe::CONFIG_PATH] = @config_file_path
       @_template
     end
 
-    def dough(template_name, name)
-      @_template = self.config[template_name]
+    def build_cookie(cookie_name, which_template)
+      @_template = self.config[which_template]
+      @cookie = Cookie.new(cookie_name, self.template)
     end
 
     private

@@ -1,9 +1,9 @@
 test-output:
   template: test-output.txt.erb
-  output_dir: output
+  output_dir: spec/test_output
   handler: vim
 
 test-output-append:
   template: test-output.txt.erb
   append: test-output-append.txt.erb
-  output_dir: output
+  output_dir: spec/test_output

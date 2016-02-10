@@ -5,7 +5,9 @@ require "cookie_cutter"
 
 template_dir = ENV['CC_TEMPLATE_DIR']
 if template_dir.nil?
-  template_dir = '/Volumes/z/Dropbox/!Templates'
+  puts "in here"
+  template_dir = '~/Dropbox/!Templates'
+  template_dir = File.expand_path(template_dir)
 end
 
 options = {}
@@ -18,6 +20,7 @@ OptionParser.new do |opts|
 end.parse!
 
 unless ARGV.size != 2
-  c = CookieCutter::Oven.new ARGV[0], ARGV[1], template_dir
+  r = CookieCutter::Recipe.new(template_dir)
+  c = r.build_cookie(ARGV[1], ARGV[0])
   c.save
 end

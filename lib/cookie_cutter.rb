@@ -1,5 +1,6 @@
 require 'cookie_cutter/version'
 require 'cookie_cutter/recipe'
+require 'cookie_cutter/cookie'
 require 'cookie_cutter/oven'
 
 require 'log4r'

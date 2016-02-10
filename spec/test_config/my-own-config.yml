@@ -1,0 +1,4 @@
+my-own-config:
+  template: this-doesnt-matter.txt.erb
+  output_dir: output
+  handler: vim

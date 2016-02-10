@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "cookie_cutter"
+
+r = CookieCutter::Recipe.new(File.expand_path File.join('spec', 'test_config'))
+c = r.build_cookie('test-cookie', 'test-output')
+puts c.save
