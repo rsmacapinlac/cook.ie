@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ritchie@macapinlac.com"]
 
   spec.summary       = %q{This Gem makes cookies if cookies were files derived from erb templates.}
-  spec.homepage      = "http://www.macapinlac.com/projects/cook.ie"
+  spec.homepage      = "http://www.macapinlac.com/projects/cook-ie"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

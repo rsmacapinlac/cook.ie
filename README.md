@@ -3,7 +3,7 @@
 [![Build
 Status](https://travis-ci.org/rsmacapinlac/cook.ie.svg?branch=master)](https://travis-ci.org/rsmacapinlac/cook.ie)
 
-This gem makes cookies. I mean, if cookies were files derived from erb templates.
+This gem makes cookies. I mean, if cookies were text files derived from erb templates.
 
 ## Installation
 
@@ -12,7 +12,11 @@ Nooo!!! Don't install it. It's not done!
 ## Setup
 
 The gem assumes that you have an environment variable called CC_TEMPLATE_DIR
-that has a pointer to a template folder.
+that has a pointer to a template folder. If it doesn't find one it defaults to
+
+`~/Dropbox/!Templates`
+
+It also expects a `config.yml` file in there to make it a bit smarter.
 
 In the template folder, you have a config.yml file and your template files.
 
@@ -21,7 +25,7 @@ In the template folder, you have a config.yml file and your template files.
 Look, it's not done but I mean you can download the code or clone this. Then
 figure out how to use it.
 
-bin/cookie template_name name
+`bin/cookie template_name name`
 
 ## Development
 
