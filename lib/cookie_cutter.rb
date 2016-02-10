@@ -1,12 +1,10 @@
 require 'cookie_cutter/version'
+require 'cookie_cutter/recipe'
 require 'cookie_cutter/oven'
+
 require 'log4r'
 
 include Log4r
-
-# create a logger named 'mylog' that logs to stdout
-# mylog = Logger.new 'mylog'
-# mylog.outputters = Outputter.stdout
 
 module CookieCutter
 
@@ -19,7 +17,6 @@ module CookieCutter
         @logger.outputters = Outputter.stdout
       end
       @logger
-
     end
   end
 
