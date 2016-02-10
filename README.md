@@ -1,4 +1,4 @@
-# CookieCutter
+# cook.ie
 
 [![Build
 Status](https://travis-ci.org/rsmacapinlac/cookie_cutter.svg?branch=master)](https://travis-ci.org/rsmacapinlac/cookie_cutter)

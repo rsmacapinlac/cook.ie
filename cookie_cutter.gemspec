@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cookie_cutter/version'
+require 'cook.ie/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cookie_cutter"
+  spec.name          = "cook.ie"
   spec.version       = CookieCutter::VERSION
   spec.authors       = ["Ritchie Macapinlac"]
   spec.email         = ["ritchie@macapinlac.com"]
