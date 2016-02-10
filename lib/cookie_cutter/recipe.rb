@@ -1,3 +1,5 @@
+require 'yaml'
+
 module CookieCutter
   # Reads config file information and builds a cookie from the selected template
   class Recipe

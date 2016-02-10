@@ -8,12 +8,6 @@ describe CookieCutter::Cookie do
       expected_yml['test-output']
   }
 
-  it 'should blah' do
-    c = CookieCutter::Cookie.new('test', template_config)
-    puts c.where_to_save
-    puts template_config
-  end
-
   it 'should know where the template is' do
     path = File.expand_path File.join(test_config_dir, template_config[CookieCutter::Cookie::TEMPLATE_NAME])
     c = CookieCutter::Cookie.new('test-output', template_config)
