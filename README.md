@@ -1,5 +1,7 @@
 # CookieCutter
 
+https://travis-ci.org/rsmacapinlac/cookie_cutter.svg?branch=master
+
 This gem makes cookies. I mean, if cookies were files derived from erb templates.
 
 ## Installation
