@@ -1,7 +1,7 @@
 # cook.ie
 
 [![Build
-Status](https://travis-ci.org/rsmacapinlac/cookie_cutter.svg?branch=master)](https://travis-ci.org/rsmacapinlac/cookie_cutter)
+Status](https://travis-ci.org/rsmacapinlac/cook.ie.svg?branch=master)](https://travis-ci.org/rsmacapinlac/cook.ie)
 
 This gem makes cookies. I mean, if cookies were files derived from erb templates.
 
