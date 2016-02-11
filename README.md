@@ -3,11 +3,11 @@
 [![Build
 Status](https://travis-ci.org/rsmacapinlac/cook.ie.svg?branch=master)](https://travis-ci.org/rsmacapinlac/cook.ie)
 
-This gem makes cookies. I mean, if cookies were text files derived from erb templates.
+This gem makes cookies. I mean, if cookies were text files derived from erb templates. http://www.macapinlac.com/projects/cook-ie
 
 ## Installation
 
-Nooo!!! Don't install it. It's not done!
+`gem install cook.ie`
 
 ## Setup
 
@@ -35,7 +35,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/cookie_cutter/fork )
+1. Fork it ( https://github.com/rsmacapinlac/cook.ie/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
