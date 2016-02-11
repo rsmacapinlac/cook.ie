@@ -7,8 +7,8 @@ module CookieCutter
   # * it's name
   # * where to save itself
   class Cookie
-    attr_accessor :name, :overwrite
-    attr_accessor :template_options
+    attr_accessor :name, :output
+    attr_accessor :overwrite, :template_options
 
     # constants
     OUTPUT_DIR = 'output_dir'
@@ -19,17 +19,22 @@ module CookieCutter
       # defaults
       @overwrite = true
       @name = name
+      @output = {}
+      @output[:name] = name
       @template_options = template_options
     end
 
     def assemble
-      ERB.new(File.open(self.template_path).read).result(binding)
+      _template_path = File.open(self.template_path).read
+      output = ERB.new(_template_path).result(binding)
+      return output
     end
 
     def save
+      template_output = self.assemble
       save_path = File.join(self.where_to_save, "#{@name}.txt")
       f = File.open(save_path, 'w+')
-      f.write(self.assemble)
+      f.write(template_output)
     end
 
     # assumption, all templates will be kept in the config directory
